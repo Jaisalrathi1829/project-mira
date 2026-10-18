@@ -1,0 +1,10 @@
+{
+  "description": "A time-aware task manager that tracks progress, deadlines, and durations, helping users stay focused and on track with a calm, precise interface.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

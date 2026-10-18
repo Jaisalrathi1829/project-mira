@@ -1,0 +1,47 @@
+{
+  "name": "figma-make-app",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:server": "tsx watch --disable-warning=ExperimentalWarning --env-file-if-exists=.env.local --clear-screen=false server/index.ts",
+    "dev:all": "concurrently --kill-others --names api,web --prefix-colors gray,blue \"tsx watch --disable-warning=ExperimentalWarning --env-file-if-exists=.env.local --clear-screen=false server/index.ts\" \"vite\"",
+    "server": "tsx --disable-warning=ExperimentalWarning --env-file-if-exists=.env.local server/index.ts",
+    "build": "vite build",
+    "start": "vite build && tsx --disable-warning=ExperimentalWarning --env-file-if-exists=.env.local server/index.ts --static",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "format": "oxfmt"
+  },
+  "dependencies": {
+    "express": "5.2.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@testing-library/dom": "10.4.2",
+    "@testing-library/react": "16.3.3",
+    "@types/express": "5.0.6",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^6.0.0",
+    "concurrently": "10.0.5",
+    "jsdom": "30.1.1",
+    "oxfmt": "^0.2.0",
+    "tailwindcss": "^4.0.0",
+    "tsx": "4.23.15",
+    "typescript": "^5.7.0",
+    "vite": "^8.0.5",
+    "vitest": "4.1.11"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "packageManager": "pnpm@10.34.3"
+}
